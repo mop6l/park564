@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>564 Park Avenue Preservation Foundation - Preserving New York's Architectural Heritage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1c3f94;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #1c3f94;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e4002b;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Colony_Club_564_Park_Avenue.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e4002b;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #b30022;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #1c3f94;
+        }
+        .mission {
+            background-color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .grid-item {
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .grid-content {
+            padding: 20px;
+        }
+        .success-stories-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .success-stories-container { 
+            display: flex;
+            transition: transform 0.5s ease; 
+            width: 100%; 
+        }
+        .success-story {
+            min-width: 100%; 
+            text-align: center;
+            padding: 20px;
+            display: none; 
+        }
+        .success-story:first-child { 
+            display: block; 
+        }
+        .slider-btn {
+            display: none;
+        }
+        footer {
+            background-color: #1c3f94;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;
+        }
+
+        .footer-links {
+           display: flex;
+           gap: 20px;
+        } 
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            z-index: 1001;
+            max-width: 400px;
+            width: 90%;
+        }
+        .popup h3 {
+            margin-top: 0;
+            color: #1c3f94;
+        }
+        .popup input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .popup button {
+            background-color: #e4002b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup button:hover {
+            background-color: #b30022;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        /* Style for charity information */
+        .charity-info {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: left; /* Align text to the left */
+        }
+        .charity-info p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">564 Park Avenue Foundation</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#efforts">Our Efforts</a></li>
+                        <li><a href="Articles.html">News</a></li> 
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="donation.html">Donate</a></li>
+                        <li><a href="Contact us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Preserving New York's Architectural Heritage</h1>
+                <p>Join us in protecting and celebrating the iconic 564 Park Avenue building.</p>
+
+                <div class="charity-info">
+                    <p><strong>Organization Name:</strong> 564 PARK AVENUE PRESERVATION FOUNDATION</p>
+                    <p><strong>Federal ID No. (EIN):</strong> 203719314</p>
+                    <p><strong>NY State Reg. No.:</strong> 40-03-74</p>
+                </div>
+
+                <a href="donation.html" class="btn">Support Our Cause</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="section mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>The 564 Park Avenue Preservation Foundation is dedicated to safeguarding the architectural integrity and historical significance of one of New York City's most treasured landmarks. Through education, advocacy, and careful restoration efforts, we aim to ensure that this iconic building continues to stand as a testament to the city's rich architectural heritage for generations to come.</p>
+        </div>
+    </section>
+
+    <section id="efforts" class="section">
+        <div class="container">
+            <h2>Our Preservation Efforts</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="images/image_fx_architectural_restorationwe_meticulously_re.jpg" alt="Architectural Restoration" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Architectural Restoration</h3>
+                        <p>We meticulously restore and maintain the building's original architectural features, preserving its historic charm and structural integrity.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/image_fx_art_conservationour_team_of_experts_works_t.jpg" alt="Art Conservation" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Art Conservation</h3>
+                        <p>Our team of experts works tirelessly to preserve and restore the building's valuable artwork and decorative elements.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1013&q=80" alt="Sustainable Practices" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Sustainable Practices</h3>
+                        <p>We implement eco-friendly solutions to ensure the building's longevity while minimizing its environmental impact.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Educational Programs" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Educational Programs</h3>
+                        <p>We offer various educational initiatives to raise awareness about architectural preservation and its importance to our cultural heritage.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Historical Research" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Historical Research</h3>
+                        <p>Our dedicated team conducts in-depth research to uncover and document the rich history of 564 Park Avenue and its significance in New York's architectural landscape.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Community Engagement" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Community Engagement</h3>
+                        <p>We actively involve the local community in our preservation efforts through workshops, events, and volunteer programs, fostering a sense of shared responsibility for our architectural heritage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="section">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="images/image_fx_facade_restoration_project_beginswere_exci.jpg" alt="Restoration Project" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Facade Restoration Project Begins</h3>
+                        <p>We're excited to announce the commencement of our comprehensive facade restoration project.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Landmark Status" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>564 Park Avenue Receives Extended Landmark Status</h3>
+                        <p>The NYC Landmarks Preservation Commission has extended the landmark status of our beloved building.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="images/image_fx_guided_architectural_tour.jpg" alt="Guided Tour" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Guided Architectural Tour</h3>
+                        <p>Date: July 15, 2023</p>
+                        <p>Join our expert-led tour to discover the hidden architectural gems of 564 Park Avenue.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Fundraising Gala" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Annual Preservation Gala</h3>
+                        <p>Date: September 22, 2023</p>
+                        <p>An elegant evening to celebrate our achievements and raise funds for future preservation efforts.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Lecture Series" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Architectural Heritage Lecture Series</h3>
+                        <p>Date: August 5, 12, 19, 2023</p>
+                        <p>Join us for a series of enlightening talks by renowned architects and historians on New York's architectural heritage.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Workshop" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Restoration Techniques Workshop</h3>
+                        <p>Date: October 7-8, 2023</p>
+                        <p>A hands-on workshop where participants can learn about various restoration techniques used in preserving historic buildings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="success-stories-slider">
+                <button class="slider-btn prev"><</button>
+                <button class="slider-btn next">></button>
+                <div class="success-stories-container">
+                    <div class="success-story">
+                        <h3>Emily Thompson, Head of Restoration</h3>
+                        <p class="success-story-text">"Thanks to the tireless efforts of the 564 Park Avenue Preservation Foundation, we've been able to restore the building's magnificent lobby to its original 1920s grandeur. It's a testament to what can be achieved when a community comes together to preserve its heritage."</p>
+                    </div>
+                    <div class="success-story">
+                        <h3>Michael Chen, Volunteer</h3>
+                        <p class="success-story-text">"The Foundation's educational programs have opened my eyes to the importance of architectural preservation. I'm proud to be a volunteer and contribute to safeguarding this iconic piece of New York's history."</p>
+                    </div>
+                    <div class="success-story">
+                        <h3>Sarah Johnson, Resident</h3>
+                        <p class="success-story-text">"As a long-time resident of 564 Park Avenue, I've witnessed firsthand the incredible transformation brought about by the Foundation's efforts. Our building isn't just preserved; it's thriving and more beautiful than ever."</p>
+                    </div>
+                    <div class="success-story">
+                        <h3>David Lee, Local Business Owner</h3>
+                        <p class="success-story-text">"The Foundation's work has inspired us to take a more active role in preserving our local heritage. Their dedication to sustainable practices has also been a guiding force in our own renovations."</p>
+                    </div>
+                    <div class="success-story">
+                        <h3>Alice Brown, Community Leader</h3>
+                        <p class="success-story-text">"The Foundation's commitment to community engagement has been phenomenal. They've brought together diverse groups of people, from architects to historians to local residents, all united by a passion for preserving this remarkable building."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        
+    </script>
+    <section id="volunteer" class="section">
+        <div class="container">
+            <h2>Volunteer Opportunities</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Tour Guide Volunteer" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Become a Tour Guide</h3>
+                        <p>Share your passion for architecture and history by leading guided tours of 564 Park Avenue.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Research Volunteer" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Join Our Research Team</h3>
+                        <p>Help us uncover and document the rich history of 564 Park Avenue and its surroundings.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1598879772121-9c0d0d12d26a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Restoration Volunteer" width="300" height="200">
+                    <div class="grid-content">
+                        <h3>Restoration Assistance</h3>
+                        <p>Lend a hand in our meticulous restoration efforts, helping to preserve the building's beauty and integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="section">
+        <div class="container">
+            <h2>Donate</h2>
+            <p>Your support makes a tangible difference in preserving 564 Park Avenue and protecting New York City's architectural heritage. Every contribution, no matter the size, brings us closer to achieving our goals.</p>
+            <a href="donation.html" class="btn">Make a Donation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2023 564 Park Avenue Preservation Foundation. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="Privacy Policy.html">Privacy Policy</a>
+                    <a href="About Us.html">About Us</a>
+                    <a href="Contact us.html">Contact Us</a>
+                    <a href="Donation.html">Donation</a>
+                </div>
+                <div class="social-links">
+                    <a href="\\\add instagram link here"><i class="fab fa-instagram"></i>
+                      </a>                      
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h3>Before you go...</h3>
+        <p>Would you like to stay updated on our preservation efforts and volunteer opportunities?</p>
+        <form id="volunteer-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        let popupShown = false;
+
+        document.addEventListener('mouseleave', (event) => {
+            if (event.clientY <= 0 && !popupShown) {
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popup').style.display = 'block';
+                popupShown = true;
+            }
+        });
+
+        document.getElementById('volunteer-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Thank you for signing up! We\'ll be in touch soon.');
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        document.getElementById('overlay').addEventListener('click', () => {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        const storiesContainer = document.querySelector('.success-stories-container');
+        const stories = document.querySelectorAll('.success-story');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            stories[currentIndex].style.display = 'none'; 
+            currentIndex = (currentIndex + 1) % stories.length; 
+            stories[currentIndex].style.display = 'block'; 
+        }, 5000); 
+
+    </script>
+</body>
+</html>

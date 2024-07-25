@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - 564 Park Avenue Preservation Foundation</title>
+    <style>
+        /* Same styles as index.html */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1c3f94;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #1c3f94;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e4002b;
+        }
+        .hero { /* Adjusted for donation page */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1515235848267-7e8573327873?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center;
+            background-size: cover;
+            height: 40vh; /* Reduced height */
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 36px; /* Smaller heading */
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e4002b;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #b30022;
+        }
+        .section {
+            padding: 80px 0;
+            text-align: center; /* Center content */
+        }
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #1c3f94;
+        }
+        footer {
+            background-color: #1c3f94;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer-content {
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;
+        }
+        .footer-links {
+           display: flex;
+           gap: 20px;
+        } 
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        /* Stylish Donation Form */
+        #donation-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        #donation-form label,
+        #donation-form input,
+        #donation-form select {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #donation-form label {
+            font-weight: bold;
+        }
+        #donation-form input[type="radio"] {
+            display: inline-block;
+            width: auto;
+        }
+        #donation-form input[type="submit"] {
+            background-color: #e4002b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        #donation-form input[type="submit"]:hover {
+            background-color: #b30022;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html" style="color: inherit;">564 Park Avenue Foundation</a></div> 
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="index.html#mission">Our Mission</a></li>
+                        <li><a href="index.html#efforts">Our Efforts</a></li>
+                        <li><a href="Articles.html">News</a></li> 
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="index.html#volunteer">Volunteer</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="Contact us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero"> 
+        <div class="container">
+            <div class="hero-content">
+                <h1>Support Our Preservation Efforts</h1>
+                <p>Your contribution helps protect our architectural heritage.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="donate">
+        <div class="container">
+            <h2>Make a Donation</h2>
+
+            <form id="donation-form" action="#" method="post"> 
+                <label for="donation-amount">Donation Amount:</label>
+                <select id="donation-amount" name="donation-amount">
+                    <option value="50">$50</option>
+                    <option value="100">$100</option>
+                    <option value="250">$250</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="other-amount" style="display: none;">Other Amount:</label>
+                <input type="number" id="other-amount" name="other-amount" placeholder="Enter amount" style="display: none;"> 
+
+                <label for="donation-type">Donation Type:</label>
+                <select id="donation-type" name="donation-type">
+                    <option value="one-time">One-Time Donation</option>
+                    <option value="monthly">Monthly Donation</option>
+                    <option value="annual">Annual Donation</option>
+                </select>
+
+                <label for="payment-method">Payment Method:</label>
+                <div>
+                    <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
+                    <label for="credit-card">Credit Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="paypal" name="payment-method" value="paypal">
+                    <label for="paypal">PayPal</label>
+                </div>
+
+                <input type="submit" value="Donate Now">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2023 564 Park Avenue Preservation Foundation. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="Privacy Policy.html">Privacy Policy</a>
+                    <a href="About Us.html">About Us</a>
+                    <a href="Contact us.html">Contact Us</a>
+                </div>
+                <div class="social-links">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/564_park_avenue_foundation?utm_source=qr&igsh=MTc2MG0zcjNqYWFuMA==" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                          </a>               
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript to show/hide "Other Amount" field
+        const donationAmountSelect = document.getElementById('donation-amount');
+        const otherAmountInput = document.getElementById('other-amount');
+        const otherAmountLabel = document.querySelector('label[for="other-amount"]'); 
+
+        donationAmountSelect.addEventListener('change', () => {
+            if (donationAmountSelect.value === 'other') {
+                otherAmountInput.style.display = 'block';
+                otherAmountLabel.style.display = 'block';
+            } else {
+                otherAmountInput.style.display = 'none';
+                otherAmountLabel.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

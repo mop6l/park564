@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - 564 Park Avenue Preservation Foundation</title>
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        transition: opacity 0.3s ease;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    header {
+        background-color: #1c3f94;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+    }
+    h2 {
+        color: #1c3f94;
+        border-bottom: 2px solid #1c3f94;
+        padding-bottom: 10px;
+    }
+    .content {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px 0;
+        background-color: #1c3f94;
+        color: #fff;
+    }
+    a {
+        color: #e4002b;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    /* Article Styles */
+    .article {
+        margin-bottom: 40px;
+        transition: all 0.3s ease; /* Smooth transition for all changes */
+        position: relative; /* To position the "Collapse" button */
+    }
+    .article-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .article-image {
+        width: 100%;
+        height: 250px; 
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .article-excerpt {
+        margin-bottom: 15px; 
+    }
+    .read-more {
+        display: inline-block;
+        background-color: #e4002b;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    .read-more:hover {
+        background-color: #b30022;
+    }
+    .full-article {
+        display: none;
+    }
+    /* Grid Layout */
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        transition: all 0.3s ease; /* Smooth transition for grid changes */
+    }
+    /* Styles for hidden articles */
+    .article.hidden {
+        display: none; /* Hide completely instead of using opacity */
+    }
+
+    /* The Fix: Make images responsive within the grid */
+    .article img { 
+        width: 100%; 
+        height: auto; 
+    }
+
+    /* Styles for expanded article */
+    .article.expanded {
+        grid-column: 1 / -1; /* Expand to all columns */
+        grid-row: 1 / -1;     /* Expand to all rows */
+    }
+
+    /* Style for the "Collapse" button inside expanded article */
+    .article.expanded .read-more {
+        position: absolute; /* Position relative to the article */
+        top: 10px;           /* Adjust top position as needed */
+        right: 10px;          /* Adjust right position as needed */
+    }
+</style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Articles</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="articles-grid">
+                <div class="article">
+                  <img alt="Elegant façade of 564 Park Avenue with preservation team, architectural sketch style" src="images/image_fx_elegant_faade_of_564_park_avenue_with_preser.jpg" width="600" height="400">
+                  <h2>The Mission and Impact of the 564 Park Avenue Preservation Foundation</h2>
+                  <p>The 564 Park Avenue Preservation Foundation is dedicated to safeguarding the architectural heritage and cultural significance of one of New York City's most iconic buildings.</p>
+                  <span class="read-more">Read more</span>
+                  <div class="full-article">
+                    <p>Through meticulous restoration efforts and community outreach, the Foundation works tirelessly to ensure that 564 Park Avenue remains a testament to the city's rich history and architectural prowess. Our mission extends beyond mere preservation; we aim to educate the public about the importance of maintaining historical landmarks and their role in shaping urban identity.</p>
+                    <p>The impact of our work is manifold: we've successfully restored intricate façade details, revitalized interior spaces to their original grandeur, and implemented sustainable preservation techniques that set new standards in the field. Our efforts have not only enhanced the building's structural integrity but have also reinvigorated local interest in architectural heritage, sparking a renewed appreciation for New York's Gilded Age masterpieces.</p>
+                    <p>Through guided tours, educational programs, and partnerships with schools and universities, we've fostered a new generation of preservation enthusiasts. The Foundation's work at 564 Park Avenue serves as a model for other preservation projects, demonstrating how historical significance can be maintained while adapting to modern needs and environmental concerns.</p>
+                  </div>
+                </div>
+                <!-- Existing article 2 -->
+                <div class="article">
+                  <img alt="Financial charts and graphs overlaid on 564 Park Avenue blueprint, watercolor style" src="images/image_fx_financial_charts_and_graphs_overlaid_on_564_p.jpg" width="600" height="400">
+                  <h2>Financial Stewardship of the 564 Park Avenue Preservation Foundation</h2>
+                  <p>Responsible financial management is at the core of the 564 Park Avenue Preservation Foundation's ability to carry out its vital mission.</p>
+                  <span class="read-more">Read more</span>
+                  <div class="full-article">
+                    <p>Our financial stewardship encompasses a multi-faceted approach to ensure the long-term sustainability of our preservation efforts. We employ a diverse funding strategy that includes private donations, corporate sponsorships, grants from historical societies, and revenue from carefully curated events hosted within the building.</p>
+                    <p>Transparency is a key principle in our financial operations. We regularly publish detailed financial reports, outlining how funds are allocated across various restoration projects, educational initiatives, and operational costs. This openness has fostered trust among our supporters and has attracted new donors who appreciate our commitment to accountability.</p>
+                    <p>We've also implemented innovative fundraising techniques, such as our "Adopt-a-Detail" program, where donors can contribute to the restoration of specific architectural elements. This personalized approach has not only increased engagement but has also allowed us to tackle restoration projects systematically and efficiently.</p>
+                    <p>Our endowment fund, carefully managed by a team of financial experts, ensures that we have a stable source of income to weather economic fluctuations and continue our work uninterrupted. By balancing immediate preservation needs with long-term financial planning, we're securing the future of 564 Park Avenue for generations to come.</p>
+                  </div>
+                </div>
+                <!-- Existing article 3 -->
+                <div class="article">
+                  <img alt="Diverse group of people participating in a 564 Park Avenue educational tour, pen and ink style" src="images/image_fx_diverse_group_of_people_participating_in_a_56.jpg" width="600" height="400">
+                  <h2>Community Engagement and Public Education by the 564 Park Avenue Preservation Foundation</h2>
+                  <p>At the heart of the 564 Park Avenue Preservation Foundation's mission is a commitment to engaging the community and educating the public about the building's historical significance.</p>
+                  <span class="read-more">Read more</span>
+                  <div class="full-article">
+                    <p>Our community engagement initiatives are designed to make 564 Park Avenue accessible and relevant to a broad audience. We offer regular guided tours that delve into the building's architecture, history, and the stories of the people who have lived and worked within its walls. These tours are tailored for different age groups and interests, ensuring that everyone from school children to architecture enthusiasts finds value in the experience.</p>
+                    <p>The Foundation has developed a robust educational program in partnership with local schools. Our "Young Preservationists" workshops introduce students to the principles of architectural preservation, urban planning, and local history. Through hands-on activities and interactive presentations, we're nurturing a new generation of individuals who understand and appreciate the importance of preserving our architectural heritage.</p>
+                    <p>We also host a popular lecture series featuring prominent historians, architects, and preservationists. These events not only provide valuable insights but also serve as a forum for community members to engage in discussions about urban development, historical preservation, and the future of New York City's architectural landscape.</p>
+                    <p>Our digital outreach efforts include virtual tours, an extensive online archive of historical documents and photographs, and social media campaigns that share daily facts and stories about 564 Park Avenue. This multi-platform approach ensures that we're reaching and educating a diverse, global audience about the significance of this New York City landmark.</p>
+                  </div>
+                </div>
+                <!-- Existing article 4 -->
+                <div class="article">
+                  <img alt="Before and after restoration images of 564 Park Avenue's intricate architectural details, sepia-toned photograph style" src="images/image_fx_before_and_after_restoration_images_of_564_pa.jpg" width="600" height="400">
+                  <h2>The Historical Significance and Restoration Efforts of 564 Park Avenue</h2>
+                  <p>564 Park Avenue stands as a testament to the architectural grandeur of New York's Gilded Age, and its restoration is a delicate balance of preserving history and ensuring modern functionality.</p>
+                  <span class="read-more">Read more</span>
+                  <div class="full-article">
+                    <p>Constructed in 1912, 564 Park Avenue is a prime example of the Beaux-Arts style that dominated high-society architecture in the early 20th century. The building's limestone façade, adorned with intricate carvings and sculptural elements, reflects the opulence and artistic sensibilities of its era. Its historical significance extends beyond its architectural merits; the building has been home to notable figures in New York's social, cultural, and business circles, each contributing to the rich tapestry of the city's history.</p>
+                    <p>Our restoration efforts are guided by a deep respect for the building's original design and craftsmanship. We employ a team of skilled artisans and conservationists who use both traditional techniques and cutting-edge technology to address the challenges of restoring a century-old structure. Recent projects have included the painstaking cleaning and repair of the ornate exterior stonework, the restoration of the grand lobby to its original splendor, and the updating of crucial systems like elevators and climate control to meet modern standards while maintaining historical integrity.</p>
+                    <p>One of our most significant undertakings has been the restoration of the building's iconic copper-clad mansard roof. This project not only addressed structural issues but also restored a key visual element of the New York City skyline. The process involved sourcing materials that matched the original specifications and employing traditional metalworking techniques to ensure an authentic restoration.</p>
+                    <p>Our approach to restoration is not about freezing 564 Park Avenue in time, but rather about ensuring its continued relevance and functionality in the 21st century. We've implemented sustainable practices and energy-efficient solutions that respect the building's historical character while reducing its environmental impact. This forward-thinking approach to preservation serves as a model for how historical buildings can be maintained and adapted for contemporary use without sacrificing their architectural integrity.</p>
+                  </div>
+                </div>
+                <!-- Newly added article 1 -->
+                <div class="article">
+                    <img src="images/image_fx_celebrating_architectural_excellence_a_look.jpg" alt="Architectural Details" width="600" height="400">
+                    <h2>Celebrating Architectural Excellence: A Look at 564 Park Avenue's Design</h2>
+                    <p>Designed by the renowned architectural firm Delano & Aldrich, 564 Park Avenue is a masterpiece of the Beaux-Arts style.  Completed in 1912, the building embodies the elegance and grandeur of its era.  Its stately limestone facade is adorned with intricate carvings, including elaborate window surrounds,  cornices, and a prominent cornice crowned with decorative balustrades.</p>
+                    <span class="read-more">Read more</span>
+                    <div class="full-article">
+                        <p> The building's design is notable for its symmetrical composition, a hallmark of the Beaux-Arts style.  A central, slightly projecting section is flanked by two receding wings, creating a sense of balance and harmony.  Large, arched windows flood the interior with natural light, while the copper mansard roof, a signature element of the style, adds a touch of Parisian sophistication. </p>
+                    </div>
+                </div>
+                <!-- Newly added article 2 -->
+                <div class="article">
+                    <img src="images/image_fx_564_park_avenue_a_legacy_of_notable_resident.jpg" alt="Historic Residents" width="600" height="400">
+                    <h2>564 Park Avenue: A Legacy of Notable Residents</h2>
+                    <p>Over the past century, 564 Park Avenue has been home to a distinguished roster of residents who have left their mark on New York City and beyond.  From captains of industry to cultural icons, the building's residents have reflected the dynamism and sophistication of the city itself.</p>
+                    <span class="read-more">Read more</span>
+                    <div class="full-article">
+                        <p>Among the building's early residents were prominent families in finance and industry.  Their presence helped establish Park Avenue as one of the city's most prestigious addresses.  In later years, the building attracted a new generation of residents involved in the arts, media, and philanthropy.</p>
+                        <p>Today, the legacy of these notable residents continues to inspire the Foundation's work.  We are committed to preserving not only the physical structure of 564 Park Avenue but also the stories and contributions of those who have called it home.  Through our efforts, we aim to ensure that this iconic building remains a vibrant part of New York City's cultural landscape for generations to come.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 564 Park Avenue Preservation Foundation. All rights reserved.</p>
+            <p><a href="index.html">Back to Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const articles = document.querySelectorAll('.article');
+        const readMoreButtons = document.querySelectorAll('.read-more');
+
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const article = button.closest('.article');
+                const fullArticle = article.querySelector('.full-article');
+
+                if (!article.classList.contains('expanded')) {
+                    // Expand the clicked article
+                    articles.forEach(otherArticle => {
+                        if (otherArticle !== article) {
+                            otherArticle.classList.add('hidden');
+                        }
+                    });
+                    article.classList.add('expanded');
+                    fullArticle.style.display = 'block';
+                    button.textContent = 'Collapse';
+                } else {
+                    // Collapse the article
+                    articles.forEach(otherArticle => {
+                        otherArticle.classList.remove('hidden');
+                    });
+                    article.classList.remove('expanded');
+                    fullArticle.style.display = 'none';
+                    button.textContent = 'Read more';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
